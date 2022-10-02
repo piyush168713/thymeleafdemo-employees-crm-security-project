@@ -66,7 +66,6 @@ public class EmployeeController {
 		return "/employees/employee-form";			
 	}
 	
-	
 	@PostMapping("/save")
 	public String saveEmployee(@ModelAttribute("employee") Employee theEmployee) {
 		
@@ -90,9 +89,8 @@ public class EmployeeController {
 	}
 	
 	@GetMapping("/search")
-	public String delete(@RequestParam("employeeName") String theName,
-						 Model theModel) {
-		
+	public String delete(@RequestParam("employeeName") String theName, Model theModel) {
+						
 		// delete the employee
 		List<Employee> theEmployees = employeeService.searchBy(theName);
 		
@@ -105,21 +103,3 @@ public class EmployeeController {
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
