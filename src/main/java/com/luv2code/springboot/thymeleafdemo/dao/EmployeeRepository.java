@@ -10,7 +10,6 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
 	// <Employee, Integer>  -> <Entity type, Primary Key>
 
-
 	// that's it ... no need to write any code LOL!
 	// No need of any implementation class
 	// Magic of Spring Data JPA
@@ -20,5 +19,4 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 	
 	// search by name
 	public List<Employee> findByFirstNameContainsOrLastNameContainsAllIgnoreCase(String name, String lName);
-
 }
