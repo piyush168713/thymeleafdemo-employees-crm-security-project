@@ -42,7 +42,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 			// we didn't find the employee
 			throw new RuntimeException("Did not find employee id - " + theId);
 		}
-		
 		return theEmployee;
 	}
 
@@ -67,14 +66,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 		else {
 			results = findAll();
 		}
-		
 		return results;
 	}
 
 }
-
-
-
-
-
 
