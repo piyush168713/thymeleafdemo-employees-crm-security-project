@@ -30,7 +30,7 @@ VALUES
     ('rajeev','{bcrypt}$2a$10$LOBWIME859ANpTnNK3teW.q.5dOUnfZ6AF0Ab819QCvq05WFaEQtu',1),
     ('piyush','{bcrypt}$2a$10$LOBWIME859ANpTnNK3teW.q.5dOUnfZ6AF0Ab819QCvq05WFaEQtu',1),
     ('ashish','{bcrypt}$2a$10$LOBWIME859ANpTnNK3teW.q.5dOUnfZ6AF0Ab819QCvq05WFaEQtu',1),
-    ('swati','{bcrypt}$2a$10$LOBWIME859ANpTnNK3teW.q.5dOUnfZ6AF0Ab819QCvq05WFaEQtu',1);
+    ('shivi','{bcrypt}$2a$10$LOBWIME859ANpTnNK3teW.q.5dOUnfZ6AF0Ab819QCvq05WFaEQtu',1);
 
 
 --
@@ -54,8 +54,8 @@ VALUES
 ('rajeev','ROLE_EMPLOYEE'),
 ('ashish','ROLE_EMPLOYEE'),
 ('ashish','ROLE_MANAGER'),
-('swati','ROLE_EMPLOYEE'),
-('swati','ROLE_ADMIN'),
+('shivi','ROLE_EMPLOYEE'),
+('shivi','ROLE_ADMIN'),
 ('piyush','ROLE_EMPLOYEE'),
 ('piyush','ROLE_OWNER');
 
