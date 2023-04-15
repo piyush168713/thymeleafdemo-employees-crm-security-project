@@ -224,3 +224,15 @@ TEST THE APPLICATION
 
 2. Open a web browser for the app: http://localhost:8080
 
+3. Log in using one of the accounts
+
++---------+----------+-----------------------------+
+| user id | password |            roles            |
++---------+----------+-----------------------------+
+| john    | fun123   | ROLE_EMPLOYEE               |
+| mary    | fun123   | ROLE_EMPLOYEE, ROLE_MANAGER |
+| susan   | fun123   | ROLE_EMPLOYEE, ROLE_ADMIN   |
+| chris   | fun123   | ROLE_EMPLOYEE, ROLE_OWNER   |
++---------+----------+-----------------------------+
+
+4. Confirm that you can login and access data based on the roles.
