@@ -91,7 +91,13 @@ service/EmployeeServiceImpl.java
 	public List<Employee> findAll() {
 		return employeeRepository.findAllByOrderByLastNameAsc();
 	}
+```
 
+
+
+### Logging Support
+### Searching by name
+```java
 	@Override
 	public List<Employee> searchBy(String theName) {
 		
@@ -106,11 +112,6 @@ service/EmployeeServiceImpl.java
 		return results;
 	}
 ```
-
-
-
-### Logging Support
-### Searching by name
 ### User Authentication based on roles
 <br><br>
 
