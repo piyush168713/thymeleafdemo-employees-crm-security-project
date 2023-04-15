@@ -9,6 +9,7 @@
 The CRUD stands for Create, Read/Retrieve, Update, and Delete. These are the four basic functions of the persistence storage.
 The CRUD operation can be defined as user interface conventions that allow view, search, and modify information through computer-based forms and reports.
 
+The controller is RESTFul and returns data in a JSON format.
 
 controller/EmployeeController.java
 ```java
@@ -46,8 +47,6 @@ controller/EmployeeController.java
 		theModel.addAttribute("employees", theEmployees);
 		
 		return "/employees/list-employees";
-		// Here, the thymeleaf (html) template name must be list-employees. (list-employees.html)
-		// i.e. src/main/resources/templates/list-employees.html
 	}
 ```
 
@@ -84,6 +83,7 @@ controller/EmployeeController.java
 
 
 ### Sorting
+Here we have the implementation of the sorting method.
 
 service/EmployeeServiceImpl.java
 ```java
