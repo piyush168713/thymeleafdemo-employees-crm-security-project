@@ -6,15 +6,22 @@
 ## <code>Key Features</code>
 
 ### CRUD
+
 ### Sorting
 ### Logging Support
 ### Searching by name
 ### User Authentication based on roles
 <br><br>
 
-Screenshots :
-
- <img src="login.png"> 
- <img src="page.png">
-<img src="1.png">
-<img src="2.png">
+<code>
+ @GetMapping("/showFormForAdd")
+	public String showFormForAdd(Model theModel) {
+		
+		// create model attribute to bind form data
+		Employee theEmployee = new Employee();
+		
+		theModel.addAttribute("employee", theEmployee);
+		
+		return "/employees/employee-form";
+	}
+</code>
