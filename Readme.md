@@ -179,6 +179,7 @@ Only display the "Delete" button for users with role of ADMIN
 		onclick="if (!(confirm('Are you sure you want to delete this employee?'))) return false">
 			Delete
 	</a>
+```
 
 
 TEST THE APPLICATION
