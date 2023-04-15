@@ -226,14 +226,13 @@ TEST THE APPLICATION
 
 3. Log in using one of the accounts
 
-``
-+---------+----------+-----------------------------+
-| user id | password |            roles            |
-+---------+----------+-----------------------------+
-| john    | fun123   | ROLE_EMPLOYEE               |
-| mary    | fun123   | ROLE_EMPLOYEE, ROLE_MANAGER |
-| susan   | fun123   | ROLE_EMPLOYEE, ROLE_ADMIN   |
-| chris   | fun123   | ROLE_EMPLOYEE, ROLE_OWNER   |
++---------+----------+-----------------------------+<br>
+| user id | password |            roles            |<br>
++---------+----------+-----------------------------+<br>
+| john    | fun123   | ROLE_EMPLOYEE               |<br>
+| mary    | fun123   | ROLE_EMPLOYEE, ROLE_MANAGER |<br>
+| susan   | fun123   | ROLE_EMPLOYEE, ROLE_ADMIN   |<br>
+| chris   | fun123   | ROLE_EMPLOYEE, ROLE_OWNER   |<br>
 +---------+----------+-----------------------------+
 ``
 
