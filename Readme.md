@@ -185,6 +185,26 @@ Only display the "Delete" button for users with role of ADMIN
 TEST THE APPLICATION
 ====================
 0. Before running the application, make sure the database tables are set up (via SQL files).  Also, be sure to update application.properties for database connection (url, userid, pass)
+```sql
+	# JDBC properties
+	#
+	# app.datasource.jdbc-url=jdbc:mysql://localhost:3306/employee_directory?useSSL=false&serverTimezone=UTC
+	app.datasource.jdbc-url=jdbc:mysql://localhost:3306/employee_directory_thymeleaf?useSSL=false&serverTimezone=UTC
+	app.datasource.username=springstudent
+	app.datasource.password=Piyush@168713
+
+	# Spring Data JPA properties
+	spring.data.jpa.repository.packages=com.luv2code.springboot.thymeleafdemo.dao
+	spring.data.jpa.entity.packages-to-scan=com.luv2code.springboot.thymeleafdemo.entity
+
+	# SECURITY JDBC properties
+	#
+	security.datasource.jdbc-url=jdbc:mysql://localhost:3306/spring_security_demo_bcrypt_thymeleaf?useSSL=false&serverTimezone=UTC
+	#security.datasource.jdbc-url=jdbc:mysql://localhost:3306/spring_security_demo_bcrypt?useSSL=false&serverTimezone=UTC
+	security.datasource.username=springstudent
+	security.datasource.password=Piyush@168713
+```
+
  
 1. Run the Spring Boot application: ThymeleafdemoApplication.java
 ```java
