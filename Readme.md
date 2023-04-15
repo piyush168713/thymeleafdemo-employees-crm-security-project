@@ -6,8 +6,11 @@
 ## <code>Key Features</code>
 
 ### CRUD
+The CRUD stands for Create, Read/Retrieve, Update, and Delete. These are the four basic functions of the persistence storage.
+The CRUD operation can be defined as user interface conventions that allow view, search, and modify information through computer-based forms and reports.
 
 
+controller/EmployeeController.java
 ```java
 	 @GetMapping("/showFormForAdd")
 		public String showFormForAdd(Model theModel) {
