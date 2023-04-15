@@ -94,8 +94,6 @@ service/EmployeeServiceImpl.java
 ```
 
 
-
-### Logging Support
 ### Searching by name
 ```java
 	@Override
@@ -112,7 +110,96 @@ service/EmployeeServiceImpl.java
 		return results;
 	}
 ```
-### User Authentication based on roles
-<br><br>
 
+### User Authentication based on roles
+In the application, we want to display content based on user role.
+
+- Employee role: users in this role will only be allowed to list employees.
+- Manager role: users in this role will be allowed to list, add and update employees.
+- Admin role: users in this role will be allowed to list, add, update and delete employees. 
+
+These restrictions are currently in place with the code: DemoSecurityConfig.java
+
+```java
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+
+		http.authorizeRequests()
+			.antMatchers("/employees/showForm*").hasAnyRole("MANAGER", "OWNER")
+			.antMatchers("/employees/save*").hasAnyRole("MANAGER", "OWNER")
+			.antMatchers("/employees/delete").hasAnyRole("ADMIN", "OWNER")
+			.antMatchers("/employees/**").hasAnyRole("EMPLOYEE", "OWNER")
+			.antMatchers("/resources/**").permitAll()
+			.and()
+			.formLogin()
+				.loginPage("/showMyLoginPage")
+				.loginProcessingUrl("/authenticateTheUser")
+				.permitAll()
+			.and()
+			.logout().permitAll()
+			.and()
+			.exceptionHandling().accessDeniedPage("/access-denied");
+	}
+```
+We also, want to hide/display the links on the view page. For example, if the user has only the "EMPLOYEE" role, then we should only display links available for "EMPLOYEE" role.
+Links for "MANAGER" and "ADMIN" role should not be displayed for the "EMPLOYEE".
+
+We can make use of Thymeleaf Security to handle this for us. 
+
+1. Add support for Thymeleaf Security
+To use the Thymeleaf Security, we need to add the following to the XML Namespace
+
+File: list-employees.html
+
+```HTML
+<html lang="en" 
+		xmlns:th="http://www.thymeleaf.org"
+		xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+```
+
+Note the reference for xmlns:sec
+
+2. "Update" button
+Only display the "Update" button for users with role of MANAGER OR ADMIN
+```HTML
+	<div sec:authorize="hasAnyRole('ROLE_MANAGER', 'ROLE_OWNER')">
+		<a th:href="@{/employees/showFormForAdd}"
+			class="btn btn-primary btn-sm mr-5 mb-3">
+			Add Employee
+			</a>
+		</div>
+```
+
+3. "Delete" buton
+Only display the "Delete" button for users with role of ADMIN
+```HTML
+<!-- Add "delete" button/link -->					
+	<a th:href="@{/employees/delete(employeeId=${tempEmployee.id})}"
+		class="btn btn-danger btn-sm"
+		onclick="if (!(confirm('Are you sure you want to delete this employee?'))) return false">
+			Delete
+	</a>
+
+
+TEST THE APPLICATION
+====================
+0. Before running the application, make sure the database tables are set up (via SQL files).  Also, be sure to update application.properties for database connection (url, userid, pass)
+ 
+1. Run the Spring Boot application: ThymeleafdemoApplication.java
+```java
+	package com.luv2code.springboot.thymeleafdemo;
+
+	import org.springframework.boot.SpringApplication;
+	import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+	@SpringBootApplication
+	public class ThymeleafdemoApplication {
+
+		public static void main(String[] args) {
+			SpringApplication.run(ThymeleafdemoApplication.class, args);
+		}
+	}
+```
+
+2. Open a web browser for the app: http://localhost:8080
 
