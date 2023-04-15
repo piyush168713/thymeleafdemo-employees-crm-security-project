@@ -230,10 +230,10 @@ TEST THE APPLICATION
 +---------+----------+-----------------------------+
 | user id | password |            roles            |
 +---------+----------+-----------------------------+
-| john    | fun123   | ROLE_EMPLOYEE               |
-| mary    | fun123   | ROLE_EMPLOYEE, ROLE_MANAGER |
-| susan   | fun123   | ROLE_EMPLOYEE, ROLE_ADMIN   |
-| chris   | fun123   | ROLE_EMPLOYEE, ROLE_OWNER   |
+| john    | cse123   | ROLE_EMPLOYEE               |
+| mary    | cse123   | ROLE_EMPLOYEE, ROLE_MANAGER |
+| susan   | cse123   | ROLE_EMPLOYEE, ROLE_ADMIN   |
+| chris   | cse123   | ROLE_EMPLOYEE, ROLE_OWNER   |
 +---------+----------+-----------------------------+
 ```
 
