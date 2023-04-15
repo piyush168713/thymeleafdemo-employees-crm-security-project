@@ -194,13 +194,13 @@ TEST THE APPLICATION
 	app.datasource.password=Piyush@168713
 
 	# Spring Data JPA properties
+	#
 	spring.data.jpa.repository.packages=com.luv2code.springboot.thymeleafdemo.dao
 	spring.data.jpa.entity.packages-to-scan=com.luv2code.springboot.thymeleafdemo.entity
 
 	# SECURITY JDBC properties
 	#
 	security.datasource.jdbc-url=jdbc:mysql://localhost:3306/spring_security_demo_bcrypt_thymeleaf?useSSL=false&serverTimezone=UTC
-	#security.datasource.jdbc-url=jdbc:mysql://localhost:3306/spring_security_demo_bcrypt?useSSL=false&serverTimezone=UTC
 	security.datasource.username=springstudent
 	security.datasource.password=Piyush@168713
 ```
