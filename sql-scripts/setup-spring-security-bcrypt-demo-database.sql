@@ -27,10 +27,10 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` 
 VALUES
-    ('rajeev','{bcrypt}$2a$10$LOBWIME859ANpTnNK3teW.q.5dOUnfZ6AF0Ab819QCvq05WFaEQtu',1),
-    ('piyush','{bcrypt}$2a$10$LOBWIME859ANpTnNK3teW.q.5dOUnfZ6AF0Ab819QCvq05WFaEQtu',1),
-    ('ashish','{bcrypt}$2a$10$LOBWIME859ANpTnNK3teW.q.5dOUnfZ6AF0Ab819QCvq05WFaEQtu',1),
-    ('shivi','{bcrypt}$2a$10$LOBWIME859ANpTnNK3teW.q.5dOUnfZ6AF0Ab819QCvq05WFaEQtu',1);
+    ('john','{bcrypt}$2a$10$LOBWIME859ANpTnNK3teW.q.5dOUnfZ6AF0Ab819QCvq05WFaEQtu',1),
+    ('chris','{bcrypt}$2a$10$LOBWIME859ANpTnNK3teW.q.5dOUnfZ6AF0Ab819QCvq05WFaEQtu',1),
+    ('mary','{bcrypt}$2a$10$LOBWIME859ANpTnNK3teW.q.5dOUnfZ6AF0Ab819QCvq05WFaEQtu',1),
+    ('susan','{bcrypt}$2a$10$LOBWIME859ANpTnNK3teW.q.5dOUnfZ6AF0Ab819QCvq05WFaEQtu',1);
 
 
 --
@@ -51,12 +51,12 @@ CREATE TABLE `authorities` (
 
 INSERT INTO `authorities` 
 VALUES 
-('rajeev','ROLE_EMPLOYEE'),
-('ashish','ROLE_EMPLOYEE'),
-('ashish','ROLE_MANAGER'),
-('shivi','ROLE_EMPLOYEE'),
-('shivi','ROLE_ADMIN'),
-('piyush','ROLE_EMPLOYEE'),
-('piyush','ROLE_OWNER');
+('john','ROLE_EMPLOYEE'),
+('mary','ROLE_EMPLOYEE'),
+('mary','ROLE_MANAGER'),
+('susan','ROLE_EMPLOYEE'),
+('susan','ROLE_ADMIN'),
+('chris','ROLE_EMPLOYEE'),
+('chris','ROLE_OWNER');
 
 
