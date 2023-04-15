@@ -84,6 +84,31 @@ controller/EmployeeController.java
 
 
 ### Sorting
+
+service/EmployeeServiceImpl.java
+```java
+	@Override
+	public List<Employee> findAll() {
+		return employeeRepository.findAllByOrderByLastNameAsc();
+	}
+
+	@Override
+	public List<Employee> searchBy(String theName) {
+		
+		List<Employee> results = null;
+		
+		if (theName != null && (theName.trim().length() > 0)) {
+			results = employeeRepository.findByFirstNameContainsOrLastNameContainsAllIgnoreCase(theName, theName);
+		}
+		else {
+			results = findAll();
+		}
+		return results;
+	}
+```
+
+
+
 ### Logging Support
 ### Searching by name
 ### User Authentication based on roles
