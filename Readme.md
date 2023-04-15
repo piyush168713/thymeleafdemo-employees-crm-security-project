@@ -3,7 +3,7 @@
 [See Dependency Tree](https://github.com/piyush168713/thymeleafdemo-employees-crm-security-project/blob/master/pom.xml)
 
 
-## <code><em>Key Features</em></code>
+## <code>Key Features</code>
 
 ### CRUD
 ### Sorting
